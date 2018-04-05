@@ -16,7 +16,7 @@ def merge(a, start1, start2, end):
 
 def mergeSort(a):
     n = len(a)
-    step = n
+    step = 1
     while (step < n):
         for start1 in range(0, n, 2*step):
             start2 = min(start1 + step, n)
