@@ -1,8 +1,8 @@
 import time, random
 
 def merge(a, start1, start2, end):
-    index1 = start2
-    index2 = start1
+    index1 = start1
+    index2 = start2
     length = end - start1
     aux = [None] * length
     for i in range(length):
