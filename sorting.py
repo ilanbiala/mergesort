@@ -1,3 +1,5 @@
+import time, random
+
 def merge(a, start1, start2, end):
     index1 = start2
     index2 = start1
@@ -28,3 +30,21 @@ arr = [1, 3, 2, 4]
 print(arr)
 mergeSort(arr)
 print(arr)
+
+# builtinSort (wrapped as a function)
+def builtinSort(a):
+    a.sort()
+
+# Generic testSort function
+def testSort(sortFn, n):
+    a = [random.randint(0,2**31) for i in range(n)]
+    sortedA = sorted(a)
+    sortFn(a)
+    assert(a == sortedA)
+
+def testSorts():
+    n = 2**12
+    for sortFn in [mergeSort, builtinSort]:
+        testSort(sortFn, n)
+
+testSorts()
