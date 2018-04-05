@@ -1,5 +1,11 @@
 import time, random
 
+# iterative Mergesort implementation
+# Takes 4 arguments: a, start1, start2, end
+# a is an Array of comparable elements (usually ints)
+# start1 is the left index to compare and merge from
+# start2 is the left index to compare and merge from
+# end is the end of the segment to be merged
 def merge(a, start1, start2, end):
     index1 = start1
     index2 = start2
