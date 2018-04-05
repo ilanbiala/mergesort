@@ -23,3 +23,8 @@ def mergeSort(a):
             end = min(start1 + 2*step, n)
             merge(a, start1, start2, end)
         step *= 2
+
+arr = [1, 3, 2, 4]
+print(arr)
+mergeSort(arr)
+print(arr)
