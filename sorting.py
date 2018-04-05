@@ -1,8 +1,14 @@
 import time, random
 
+# iterative Mergesort implementation
+# Takes 4 arguments: a, start1, start2, end
+# a is an Array of comparable elements (usually ints)
+# start1 is the left index to compare and merge from
+# start2 is the left index to compare and merge from
+# end is the end of the segment to be merged
 def merge(a, start1, start2, end):
-    index1 = start2
-    index2 = start1
+    index1 = start1
+    index2 = start2
     length = end - start1
     aux = [None] * length
     for i in range(length):
@@ -11,8 +17,8 @@ def merge(a, start1, start2, end):
             aux[i] = a[index2]
             index2 += 1
         else:
-            aux[1] = a[index1]
-            index1 += i
+            aux[i] = a[index1]
+            index1 += 1
     for i in range(start1, end):
         a[i] = aux[i - start1]
 
