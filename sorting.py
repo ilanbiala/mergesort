@@ -45,12 +45,17 @@ def builtinSort(a):
 def testSort(sortFn, n):
     a = [random.randint(0,2**31) for i in range(n)]
     sortedA = sorted(a)
+<<<<<<< HEAD
+    sortFn(a)
+    assert(a == sortedA)
+=======
     startTime = time.time()
     sortFn(a)
     endTime = time.time()
     elapsedTime = endTime - startTime
     assert(a == sortedA)
     print("%20s n=%d  time=%6.3fs" % (sortFn.__name__, n, elapsedTime))
+>>>>>>> 83b1165273c175596b666113e4694f2aa06ae919
 
 def testSorts():
     n = 2**12
